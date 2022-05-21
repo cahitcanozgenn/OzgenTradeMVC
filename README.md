@@ -1,2 +1,2 @@
 # OzgenTradeMVC
-Bu proje MVC kullanılarak yapılmıştır.
+Bu proje MVC kullanılarak yapılmıştır.Basit bir projedir.
