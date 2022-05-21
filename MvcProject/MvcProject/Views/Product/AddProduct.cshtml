@@ -1,0 +1,28 @@
+﻿@model MvcProject.Models.Entity.product
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h2>Yeni Ürün Ekleme Sayfası</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label>ÜRÜN ADI</label>
+        <input type="text" name="productName" class="form-control" />
+        <label>ÜRÜN KATEGORİSİ</label>
+        @Html.DropDownListFor(m => m.productCategory, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
+        <label>ÜRÜN FİYATI</label>
+        <input type="text" name="productUnitPrice" class="form-control" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info"  id="button">EKLE</button>
+    </div>
+    <script>
+        $('#button').click(function () {
+            alert('Ürün Ekleme İşlemi Başarıyla Tamamlandı.');
+        });
+    </script>
+
+</form>
+

@@ -1,0 +1,24 @@
+﻿@model MvcProject.Models.Entity.customer
+@{
+    ViewBag.Title = "customerList";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("Update", "Customer", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.customerId)
+    @Html.TextBoxFor(m => m.customerId, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.firstName)
+    @Html.TextBoxFor(m => m.firstName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.lastName)
+    @Html.TextBoxFor(m => m.lastName, new { @class = "form-control" })
+</div>
+    <div>
+        <button class="btn btn-primary">Müşteri Güncelle</button>
+    </div>
+}

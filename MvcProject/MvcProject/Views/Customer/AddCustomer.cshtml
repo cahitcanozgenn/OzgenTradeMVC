@@ -1,0 +1,31 @@
+﻿@model MvcProject.Models.Entity.customer
+@{
+    ViewBag.Title = "AddCustomer";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h2>Yeni Müşteri Ekleme Sayfası</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label>MÜŞTERİ ADI</label>
+        @Html.TextBoxFor(m => m.firstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.firstName, "", new { @style = "color:red" })
+        <br />
+        <label>MÜŞTERİ SOYADI</label>
+        @Html.TextBoxFor(m => m.lastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.lastName, "", new { @style = "color:red" })
+    </div>
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="button">EKLE</button>
+    </div>
+    <script>
+        $('#button').click(function () {
+            alert('Müşteri Ekleme İşlemi Başarıyla Tamamlandı.');
+        });
+    </script>
+
+</form>
+

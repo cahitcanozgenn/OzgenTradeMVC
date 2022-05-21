@@ -1,0 +1,30 @@
+﻿@model MvcProject.Models.Entity.category
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h2>Yeni Kategori Ekleme Sayfası</h2>
+
+    <form class="form-group" method="post">
+        <div>
+            <label>KATEGORİ ADI</label>
+            @Html.TextBoxFor(m=>m.categoryName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m=>m.categoryName,"", new {@style="color:red"})
+        </div>
+
+        
+        <div style="margin-top:15px">
+            <button class="btn btn-info" id="button">EKLE</button>
+        </div>
+        <script>
+            $('#button').click(function ()
+            {
+                alert('Kategori Ekleme İşlemi Başarıyla Tamamlandı.');
+            });
+        </script>
+        
+    </form>
+
+
+

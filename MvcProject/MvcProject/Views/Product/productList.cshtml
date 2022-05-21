@@ -1,0 +1,29 @@
+﻿@model MvcProject.Models.Entity.product
+@{
+    ViewBag.Title = "productList";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("Update", "Product", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.productId)
+    @Html.TextBoxFor(m => m.productId, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.productName)
+    @Html.TextBoxFor(m => m.productName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.productCategory)
+    @Html.DropDownListFor(m => m.category.categoryId, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
+
+
+    @Html.LabelFor(m => m.productUnitPrice)
+    @Html.TextBoxFor(m => m.productUnitPrice, new { @class = "form-control" })
+
+</div>
+    <div>
+        <button class="btn btn-primary">Kategori Güncelle</button>
+    </div>
+}

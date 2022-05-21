@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h2>Yeni Ürün Ekleme Sayfası</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label>ÜRÜN</label>
+        <input type="text" name="product" class="form-control" />
+        <label>MÜŞTERİ</label>
+        <input type="text" name="customer" class="form-control" />
+        <label>ADET</label>
+        <input type="text" name="piece" class="form-control" />
+        <label>FİYAT</label>
+        <input type="text" name="unitPrice" class="form-control" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">EKLE</button>
+    </div>
+            <script>
+            $('#button').click(function ()
+            {
+                alert('Kategori Ekleme İşlemi Başarıyla Tamamlandı.');
+            });
+        </script>
+
+</form>
+

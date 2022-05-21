@@ -1,0 +1,21 @@
+﻿@model MvcProject.Models.Entity.category
+@{ 
+    ViewBag.Title = "categoryList";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("Update", "Category", FormMethod.Post))
+{
+                <div class="form-group">
+                    @Html.LabelFor(m => m.categoryId)
+                    @Html.TextBoxFor(m => m.categoryId, new {@class="form-control"})
+
+                    @Html.LabelFor(m => m.categoryName)
+                    @Html.TextBoxFor(m => m.categoryName, new { @class = "form-control" })
+                </div>
+                <div>
+                    <button class="btn btn-primary">Kategori Güncelle</button>
+                </div>
+            }

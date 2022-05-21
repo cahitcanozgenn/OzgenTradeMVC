@@ -1,0 +1,49 @@
+﻿@using MvcProject.Models.Entity
+@model List<sales>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">SATIŞLAR</h2>
+
+<table id="table1" class="table table-bordered text-center">
+    <thead>
+    <tr>
+        <th class="text-center">SIRA NO</th>
+        <th class="text-center">ÜRÜN</th>
+        <th class="text-center">MÜŞTERİ</th>
+        <th class="text-center">ADET</th>
+        <th class="text-center">FİYAT</th>
+        <th class="text-center">GÜNCELLE</th>
+        <th class="text-center">SİL</th>
+    </tr>
+    </thead>
+    @foreach (var sales in Model)
+    {
+        <tr>
+            <th class="text-center">@sales.salesId</th>
+            <th class="text-center">@sales.product1.productName</th>
+            <th class="text-center">@sales.customer1.firstName @sales.customer1.lastName</th>
+            <th class="text-center">@sales.piece</th>
+            <th class="text-center">@sales.unitPrice</th>
+            <th class="text-center"><a href="/Sales/Update/@sales.salesId" class="btn btn-primary">GÜNCELLE</a></th>
+            <th class="text-center"><a href="/Sales/Delete/@sales.salesId" class="btn btn-danger" onclick="return confirm('Gerçekten Silmek İstiyor Musunuz?')">SİL</a></th>
+
+        </tr>
+
+    }
+</table>
+
+<a href="/Sales/AddSales" class="btn btn-primary">Satış Yap</a>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#table1').dataTable({});
+</script>

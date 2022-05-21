@@ -1,0 +1,24 @@
+﻿@model MvcProject.Models.Entity.sales
+@{
+    ViewBag.Title = "salesList";
+    Layout = "~/Views/Home/_MainLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("Update", "Sales", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.salesId)
+        @Html.TextBoxFor(m => m.salesId, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.product.productName)
+        @Html.TextBoxFor(m => m.product.productName, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.customer.firstname)
+        @Html.TextBoxFor(m => m.lastName, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Müşteri Güncelle</button>
+    </div>
+}
