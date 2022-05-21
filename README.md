@@ -1,1 +1,2 @@
 # OzgenTradeMVC
+![Screenshot](oluıkju.png)
