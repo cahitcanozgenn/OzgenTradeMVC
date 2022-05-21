@@ -1,2 +1,2 @@
 # OzgenTradeMVC
-![alt text](aa.PNG)
+<img src="aa.PNG">
