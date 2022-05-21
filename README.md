@@ -1,2 +1,2 @@
 # OzgenTradeMVC
-![Screenshot](oluıkju.png)
+[Screenshot](aa.png)
