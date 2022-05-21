@@ -1,2 +1,2 @@
 # OzgenTradeMVC
-<img src="aa.PNG">
+Bu proje MVC kullanılarak yapılmıştır.
